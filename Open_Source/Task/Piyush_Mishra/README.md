@@ -1,4 +1,4 @@
-# About Me :smiley face:
+# About Me :smiley:
 Hello Everyone! :wave:, I am Piyush Mishra
 
 • **Registration Number: 2402040022**
