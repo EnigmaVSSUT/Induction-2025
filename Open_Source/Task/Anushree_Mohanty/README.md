@@ -1,9 +1,9 @@
 # Hello, I am **Anushree Mohanty** ✨
 
-**Registration Number:** 2402050053
+**My Registration Number is:-** 2402050053
 
-**Branch:** Electrical Engineering
+**My Branch is:-** Electrical Engineering
 
-**Domain:** Web Development, Game Development
+**The domain I am interested in are:-** Web Development, Game Development
 
-**Hobbies:** Listening to Music, Sketching and painting
+**My Hobbies are:-** Listening to Music, Sketching and painting
