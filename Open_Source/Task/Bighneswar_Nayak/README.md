@@ -18,4 +18,4 @@
 - Develop projects in *web development* and *game development*.  
 
 ## 🎥 Hobbies  
-- Watching YouTube for tech tutorials and entertainment.
+- Watching YouTube for tech tutorials and entertainment...
