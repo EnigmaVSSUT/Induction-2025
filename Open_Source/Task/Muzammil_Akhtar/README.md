@@ -6,4 +6,4 @@
 
 **Domain:** Web Development, App Development 
 
-**Hobbies:** Listening to Music and Watching Animes
+**Hobbies:** Listening to Music and Watching Anime.
