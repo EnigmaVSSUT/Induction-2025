@@ -1,7 +1,11 @@
-# Aradhya Rath
+# Hello, I'm Aradhya Rath  
 
-I'm a 1st Year B.Tech student and am passionate about **coding** and **exploring the tech-world out there.** I am familiar with **C++,** **C** and **Python,** and I’m excited to contribute to **Enigma**, the official coding club of VSSUT, Burla.
+- *📌 Registration Number:* 2402070132  
+- *🎓 Branch:* Electronics and Telecommunication Engineering  
+- *💡 Interests:* Coding 💻, Music 🎶, Reading Novels 📖, Learning New Things 🚀  
+- *🛠 Domain:* Web Development 🌐, AI/ML 🤖  
 
-- *Course:* 1st Year B.Tech in Electronic and Telecommunication Engineering.
-- *Interests:* Coding, Music, Reading novels, Learning new things.
-- *Looking forward to:* Working with the coding community and growing my skills. 
+> *Nothing but an individual on a perpetual lookout, seeking new avenues to blend the digital realm with the artistic in everything I do XD*
+
+**Excited to learn and grow at ENIGMA, the official coding club of VSSUT, Burla!** 🚀
+
