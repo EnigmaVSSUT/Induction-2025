@@ -4,7 +4,7 @@
 
 **<h4>Name: Sai himadri tanmaya bag<h6>**
 
-**<h4>Branch: Computer science & engiineering<h6>**
+**<h4>Branch: Computer science & engineering<h6>**
 
 **<h4>Domain: Web development & competitive programming<h6>**
 
