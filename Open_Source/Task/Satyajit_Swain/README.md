@@ -1,4 +1,4 @@
-#  # 👋 Hey there, I'm Satyajit Swain! 🚀
+# 👋 Hey there, I'm Satyajit Swain! 🚀
 
 🎓 **Registration Number:** 2402081067\
 💻 **Branch:** CSE (AI & ML)\
