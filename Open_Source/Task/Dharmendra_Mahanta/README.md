@@ -1,9 +1,9 @@
-# Hello, I am **Dharmendra Mahanta** 👋
+# Hello, I am **Subham kumar rana** 👋
 
-**Registration Number:** 2302080038 
+**Registration Number:** 2402070143 
 
-**Branch:** Information Technology
+**Branch:** Electronics and telecomminication
 
 **Domain:** Web Development, AI/ML 
 
-**Hobbies:** Listening to Music
+**Hobbies:** Chanting "Hare krishna"
