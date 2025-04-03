@@ -19,4 +19,4 @@ I find joy in **Painting🎨 and Singing🎤**.
 Stepping into the **Enigma** isn’t just about writing code—it’s about crafting solutions, pushing boundaries, and embracing the art of problem-solving. It is an opportunity to connect with like-minded peers,collaborate on innovative ideas and enhance skills.  
 
 ⭐**Every great coder was once a beginner who refused to quit**.  
-Looking forward to getting a chance to **explore**, **experiment**, and **evolve** with **Enigma**. 
+Looking forward to getting a chance to **explore**, **experiment**, and **evolve** with **Enigma**✨. 
