@@ -1,9 +1,9 @@
-# Hello, I am **Dharmendra Mahanta** 👋
+# Hello, I am **Abhishek pani** 👋
 
-**Registration Number:** 2302080038 
+**Registration Number:** 2402081065 
 
-**Branch:** Information Technology
+**Branch:** CSE AI ML
 
-**Domain:** Web Development, AI/ML 
+**Domain:** Web Development, Video Editing
 
 **Hobbies:** Listening to Music
