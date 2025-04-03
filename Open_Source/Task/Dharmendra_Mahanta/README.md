@@ -6,4 +6,4 @@
 
 **Domain:** Web Development, AI/ML 
 
-**Hobbies:** Listening to Music 
+**Hobbies:** Listening to Music
