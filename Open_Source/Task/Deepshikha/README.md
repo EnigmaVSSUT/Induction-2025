@@ -11,7 +11,7 @@ I am a beginner eager to dive into the **World of Coding**⌨️.
 I have keen interest in the **Domains** of-
 * **Artificial Intelligence and Machine Learning**🤖.  
 * **Competitive Programming**⏱️.  
-I am excited to explore how logic and creativity intetwine in these domains.
+I am excited to explore how logic and creativity interwine in these domains.
   
 I find joy in **Painting🎨 and Singing🎤**.
 ***
