@@ -1,0 +1,5 @@
+- Name : prangya paramita bihari
+    - Registration Number : 2402020061
+    - Branch : chemical engineering
+    - Hobbies : painting and craftinmg
+    - Domain : web development and Ui\Xi
