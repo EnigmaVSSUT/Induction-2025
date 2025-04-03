@@ -1,9 +1,9 @@
-# Hello, I am **Sampark Sagar Barik** 
+# Hello, I am **Sampark Sagar Barik** 👋
 
-**Registration Number:** 2402081063
+**Registration Number:** 2402081063 
 
-**Branch:** CSE (Al & Ml)
+**Branch:** CSE(AI&ML)
 
-**Domain:** Web Development, Ai Ml
+**Domain:** Web Development, AI/ML 
 
-**Hobbies:** Palying Cricket
+**Hobbies:** Playing Cricket
