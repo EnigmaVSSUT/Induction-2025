@@ -1,9 +1,9 @@
-# Hello, I am **Dharmendra Mahanta** 👋
+# Hello, I am **Aditya Swarup Khuntia** 👋
 
-**Registration Number:** 2302080038 
+**Registration Number:** 2402070100
 
-**Branch:** Information Technology
+**Branch:** Electronics & Telecommunication Engineering
 
-**Domain:** Web Development, AI/ML 
+**Domain:** Web Development, Cyber Security 
 
 **Hobbies:** Listening to Music
