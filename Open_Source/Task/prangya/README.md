@@ -1,4 +1,4 @@
-namr : prangya paramita bihari
+name : prangya paramita bihari
 
 Registration Number: 2402020061
 
