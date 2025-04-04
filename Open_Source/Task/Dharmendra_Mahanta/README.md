@@ -1,9 +1,9 @@
-# Hello, I am **Shubhra Dash** 👋
+# Hello, I am **Dharmendra Mahanta** 👋
 
-**Registration Number:** 2402081049
+**Registration Number:** 2302080038 
 
-**Branch:** CSE(AI & ML)
+**Branch:** Information Technology
 
-**Domain:** AI/ML , GD 
+**Domain:** Web Development, AI/ML 
 
 **Hobbies:** Listening to Music
