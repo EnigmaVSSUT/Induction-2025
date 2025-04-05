@@ -65,7 +65,7 @@ Your webpage should include the following:
 - Add contact information
 - Include social media links (icons or simple text)
 - A copyright notice
-- 
+  
 ### 7. Submit
 
  - Now add, commit and push the changes just like you did in task 1 and create a pull request.
