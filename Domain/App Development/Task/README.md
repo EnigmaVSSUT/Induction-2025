@@ -62,8 +62,6 @@ Include clickable links using `Intent` to open:
 - LinkedIn
 - Gmail (use email intent to launch mail app)
 
-> 🔗 You don't need Java/Kotlin. Just design buttons or text views for now.
-
 ### ✅ 6. **Attractive Background (Mandatory)**
 Choose **any one**:
 - Solid color (`android:background="#HEXCODE"`)
