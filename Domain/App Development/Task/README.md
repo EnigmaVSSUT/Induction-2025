@@ -27,7 +27,6 @@ git pull upstream main
 ```
 This should now pull all the changes that have been made to the main repo from merging the pull requests.
 
-
 ---
 
 ## Task Objective
@@ -73,10 +72,8 @@ Choose **any one**:
 
 Make sure all text remains **readable** over your background.
 
-
-### 6. Submit
+### ✅ 7. Submit
  - Now add, commit and push the changes just like you did in task 1 and create a pull request.
-
 ---
 
 ## Bonus (Optional)
