@@ -102,6 +102,7 @@ Want to stand out? Try adding:
   - Netlify
   - Vercel
   - Or any other deployment platform of your choice
+  - Try to deploy your website on all these platforms (As it will make your stand out of the crowd)
 - Inside the 'Web Development>Task' folder create a folder of your name. Inside the folder add your source code and a file named 'link.txt' containing hosted link of your website .
 
 ## Final Note
