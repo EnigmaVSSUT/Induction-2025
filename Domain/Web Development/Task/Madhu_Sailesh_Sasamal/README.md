@@ -5,7 +5,7 @@
 - **Registration Number 🎓**: 2402061071  
 - **Branch**: Electrical and Electronics Engineering  
 - **Domain 🧑‍💻**: Web Development & Competitive Programming  
-- **Hobbies 🏓**: Singing, Coding , Traveling  
+<!-- - **Hobbies 🏓**: Singing, Coding , Traveling   -->
 
 --
 
