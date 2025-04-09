@@ -2,7 +2,7 @@
 ### 👤 About Me  
 - **Registration Number 🎓**: 2402061071  
 - **Branch**: Electrical and Electronics Engineering  
-- **Branch**: G2
+- **Sec**: G2
 - **Task**: Web-Developement(CREATING A BOOK SELLING WEBPAGE)
 
 ### 🔗 Project deployment Link 
