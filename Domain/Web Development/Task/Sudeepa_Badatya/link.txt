@@ -1,0 +1,2 @@
+github : https://sudeepabadatya.github.io/web-dev-task/
+netlify : https://astonishing-piroshki-8319a2.netlify.app/
