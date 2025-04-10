@@ -1,0 +1,89 @@
+
+  
+:root {
+  --bg-color: #add8e6;
+  --text-color: #000;
+  --nav-bg: #000;
+  --nav-text: #fff;
+  --button-bg: #000;
+  --button-text: #fff;
+  --card-bg: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Garamond;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #333;
+}
+
+section {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book {
+  background-color: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.book img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.book:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
