@@ -43,21 +43,21 @@ Explore the world of **Web Development**, **App Development**, and **AI/ML** by 
 
 #### 🚀 **Web Development**  
 Learn the basics of **HTML**, **CSS** to create responsive web pages.  
-- [👉 Task: Coming Soon]()  
+- [👉 Task: Book selling website](./Domain/Web%20Development/Task/README.md)  
 ---
 #### 📱 **App Development**  
 Explore **Kotlin** to build native Android apps.  
-- [👉 Task: Coming Soon]()
+- [👉 Task: Personal portfolio](./Domain/App%20Development/Task/README.md)
 
 ---
 
 #### 🤖 **AI/ML**  
 Understand the basics of **Python** and explore the domain of AI/ML.  
-- [👉 Task: Coming Soon]()  
+- [👉 Task: No task]()  
 
 ---
 
-### 🏅 **Contest (6th April) | Competitive Programming** <img src="./assets/adv-web.gif" width="50">  
+### 🏅 **Contest (8th April - 6:00 PM) | Competitive Programming** <img src="./assets/adv-web.gif" width="50">  
 Put your problem-solving skills to the test with an exciting competitive coding challenge.  
 - [👉 Task: Coming Soon]()  
 
