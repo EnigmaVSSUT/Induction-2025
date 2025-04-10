@@ -266,9 +266,11 @@ nav a {
     
   }
 
-  #about {
+   #about {
     padding: 1.5rem 1rem;
+    margin-top: 50px;
   }
+
 
   .site-footer {
     font-size: 0.9rem;
