@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #007AF3;
+}
+
+body {
+  background-color: #F2F2F2;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+}
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.45em;
+}
+.navbar .logo span {
+  color: var(--primary-color);
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.left-col .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 0.1em;
+}
+.left-col h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0.2em;
+}
+
+.Logo {
+  width: 50%;
+  margin-top: 2em;
+}
+
+.scienceBooks-section {
+  background: var(--primary-color);
+  color: white;
+}
+.scienceBooks-section li {
+  background-color: #006bd6;
+  text-align: center;
+  padding: 2em 1em;
+  width: 60%;
+  margin: 5em auto 1em auto;
+  border-radius: 1em;
+}
+.scienceBooks-section li img {
+  height: 15em;
+  width: 11em;
+  border-radius: 0.7em;
+  border: 5px solid #2d2d2d;
+}
+
+.storyBooks-section {
+  background: var(--primary-color);
+  color: white;
+}
+.storyBooks-section li {
+  background-color: #006bd6;
+  text-align: center;
+  padding: 2em 1em;
+  width: 60%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+.storyBooks-section li img {
+  height: 15em;
+  width: 11em;
+  border-radius: 0.7em;
+  border: 5px solid #2d2d2d;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272e;
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.Contact-section{
+  height: 180px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+@media only screen and (min-width: 824px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: flex;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: 0.1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1100px) {
+
+  .navbar .logo{
+    margin-left: -110px;
+  }
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 5em 2em;
+  }
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .hero .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  .Logo {
+    width: 30%;
+    margin-right: 8em;
+  }
+  .scienceBooks-section ul {
+    display: flex;
+  }
+  .scienceBooks-section ul li {
+    margin: 0 1em;
+  }
+  .storyBooks-section ul {
+    display: flex;
+  }
+  .storyBooks-section ul li {
+    margin: 0 1em;
+  }
+}

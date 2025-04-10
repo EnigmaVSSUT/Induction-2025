@@ -1,0 +1,2 @@
+GitHub Pages : https://sameerraja22.github.io/LandingPage/
+Vercel : https://landing-page-xi-woad.vercel.app/
