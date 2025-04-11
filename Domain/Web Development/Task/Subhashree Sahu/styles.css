@@ -1,0 +1,123 @@
+.logo {
+    font-size: 30px;
+    font-weight:600;
+    font-family: "Hanalei Fill", sans-serif;
+    color: #055c49;
+  }
+
+  .logo:hover{
+    text-shadow: 1px 1px 3px rgb(161, 175, 161);;
+  }
+
+  body{
+    background-image: url("bg2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  header{
+    background-color: #dffae0; 
+    padding: 20px;
+    font-size: 15px;    
+  }
+
+  .hero{
+    background-color: #fdf8e8; 
+    text-align: center;
+    padding: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  h1{
+    font-size: 60px;
+    margin-bottom: 4px;
+    font-family: "fredericka the great",sans-serif;
+    font-weight: 100;
+    
+  }
+
+  h5{
+    margin-top: 0px;
+    font-size: 30px;
+    font-family:"lavishly yours", sans-serif;
+    color: rgb(3, 5, 77);
+  }
+
+  h2{
+    font-family: "Sedgwick Ave Display",sans-serif;
+    font-size: 40px;
+    color: rgb(5, 37, 29);
+    margin-bottom: 4px;
+  }
+
+  p1{
+    font-family: "Quintessential",sans-serif;
+    font-weight:600;
+    color: rgb(27, 25, 25);
+    font-size: 15px;
+  }
+
+  h3{
+    font-family: "Special Gothic Expanded One",sans-serif;
+  }
+
+  .navigation{
+    text-align: right;
+  }
+
+  .navigation:hover{
+    text-shadow: 0px 0px 0.7px hsl(240, 0%, 48%);
+  }
+
+  p{
+    margin-top: 0px;
+    font-size: 17px;
+  }
+
+  .book{
+    background-color: #dff5d4;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.book:hover{
+    box-shadow: 5px 5px 5px rgb(143, 141, 141);
+}
+
+  .book img{
+    width: 250px;
+    height: 300px;
+    
+  }
+
+  .books{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;    
+  }
+
+
+  .section-name{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+
+  .about{
+    background-color: #f4f8f4;  
+    text-align: center;
+    padding: 1px;
+  }
+
+  footer {
+    background-color: rgb(61, 58, 58);
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
