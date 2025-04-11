@@ -1,0 +1,191 @@
+/* General Reset */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #bd7121;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+header nav a {
+    font-size: large;
+    text-decoration: none;
+    color: #dfe8e6;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+header nav a:hover {
+    color: #8eec54; 
+}
+/* Hero Section */
+#hero {
+    background:  linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.335)),url(./assets/home-img.jpg ) no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    /* background-attachment: fixed;  */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #eee;
+}
+/* .Home-img img {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    object-fit:fill;
+    z-index: 1;
+} */
+.Home-content h1 {
+    font-size: 40px;
+    color: #ffffff;
+    display: flex;
+    text-align: center;
+    margin-left: 35vw;
+}
+.Home-content h3 {
+    font-size: 25px;
+    color: #8efa00;
+    margin-left: 38vw;
+}
+
+/* Books Section */
+#books {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+#books h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #bd7121;
+    margin-bottom: 20px;
+}
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    /* margin-top: 2rem; */
+    /* border: #333; */
+    /* border-width: 12px; */
+}
+.books img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.books h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+.books p {
+    font-size: 14px;
+    color: #666;
+}
+.buy{
+    align-items: center;
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease; 
+}
+.buy:hover{
+    background-color: #1d7007;
+}
+
+/* About Section */
+#about {
+    padding: 150px 90px;
+    text-align: center;
+    background-color: #e1ded8;
+}
+#about h2 {
+    color: #bd7121;
+    margin-bottom: 20px;
+}
+.about-content p {
+    color: #666;
+}
+
+/* Footer Section */
+footer {
+    background-color: #9f672b;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+footer h4 {
+    margin-bottom: 5px;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.social-icon{
+    padding-left: 15px;
+    justify-content: space-between;
+}
+.social-icon a{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   background: transparent;
+   border: 2px solid #ece5d8;
+   border-radius: 50%;
+   font-size: 20px;
+   color: #ece5d8;
+   text-decoration: none;
+   transition: 0.3s;
+}
+.social-icon a:hover{
+    transform: scale(1.2);
+}
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .Home-content h1 {
+        font-size: 28px;
+    }
+}
+
+.line{
+    margin: 5rem 0;
+}
