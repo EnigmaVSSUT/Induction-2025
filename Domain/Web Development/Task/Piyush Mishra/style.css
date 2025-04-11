@@ -20,7 +20,7 @@ body{
     height:73px;text-align:center;width:100vw;z-index:1;background:transparent;font-weight:bolder;font-size:19px;text-align:center;color:white;cursor:default;backdrop-filter:blur(8px);box-shadow:0px 0px 5px red;position:fixed;
 }
 nav a{
-    color:brown;padding:50px 5vw;border-radius:5px;border: 1px solid transparent;cursor:pointer;
+    color:white;padding:50px 5vw;border-radius:5px;border: 1px solid transparent;cursor:pointer;
 }
 nav a:hover{
     color:rgb(4, 107, 252);background-color:rgb(255, 0, 0);text-decoration:underline 2px rgb(4, 107, 252);border:1px solid blue;text-shadow:0px 0px 15px blue;
@@ -67,7 +67,7 @@ nav a:hover{
     transform:rotateY(180deg);
 }
 .about{
-    width:100vw;height:250px;color:brown;text-align:center;border:2px solid brown;border-radius:10px;z-index:35;
+    width:100vw;height:250px;color:white;text-align:center;border:2px solid white;border-radius:10px;z-index:35;
 }
 .about:hover{
     transform:scale(105%);perspective:600%;
