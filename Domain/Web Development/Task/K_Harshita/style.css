@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #111;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+  }
+  
+  header {
+    background-color: #232f3e;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar h1 {
+    font-size: 1.8rem;
+    color: #febd69;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background-color: #febd69;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar li a {
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .navbar li a:hover {
+    color: #febd69;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #fffbd5, #fefcea);
+    text-align: center;
+    padding: 100px 20px 60px;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    color: #232f3e;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  
+  .books-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .books-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #232f3e;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  
+  .book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .book-card h3 {
+    font-size: 1.2rem;
+    color: #131921;
+  }
+  
+  .book-card .rating {
+    margin: 5px 0 10px;
+    color: #ff9900;
+  }
+  
+  .book-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .buy-btn {
+    background-color: #ffa41c;
+    border: none;
+    padding: 10px 14px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background-color: #cc8500;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff3e3e;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+  }
+  
+  .about {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    color: #232f3e;
+  }
+  
+  .about p {
+    max-width: 700px;
+    margin: 20px auto 0;
+    font-size: 1rem;
+  }
+  
+  footer {
+    background-color: #232f3e;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #febd69;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .search-bar {
+      width: 100%;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
