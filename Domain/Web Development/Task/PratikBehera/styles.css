@@ -1,0 +1,161 @@
+body {
+    font-family: Times New Roman, serif;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffdef7;
+background-image: linear-gradient(0deg, #ffdef7 0%, #b5fbff 100%);
+
+}
+.navbar {
+    background-color: #0de5fd56;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-links li {
+    position: relative;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+  }
+
+
+  .nav-links a:hover {
+    color: #ff6214;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+ }
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+.book:hover {
+    background-color: #96e2cb; 
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.hero {
+    background-image: url(images/hero1.jpg);
+    color: white;
+    padding: 80px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2 {
+    font-family: Lucida Console, monospace  ;
+    margin-bottom: 10px;
+}
+
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.book {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: rgb(213, 213, 213);
+    box-shadow: 15px 5px 30px rgb(174, 246, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.about-us {
+    background-color: rgba(251, 143, 236, 0.137);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+@media (max-width: 768px)
+ {
+    .book-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.book-price {
+  color: #e74c3c;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
