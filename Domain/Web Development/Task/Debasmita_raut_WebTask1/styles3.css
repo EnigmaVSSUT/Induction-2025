@@ -1,0 +1,220 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  .nav a:hover{
+    border-bottom: 2px solid gold;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: extra-expanded;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links li a:hover,
+  footer a:hover {
+  color: #ffc107;
+  transform: scale(1.05);
+}
+
+  
+  .search-bar {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.3s ease;
+  }
+  .search-bar:focus {
+    box-shadow: 0 0 8px #00bcd4;
+  }
+  
+  /* Hero Section */
+  .hero {background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJiYpXWFLLJTfS0uSQ53kL8bq1rLcXnhhaoQ&s') no-repeat center/cover;
+    color: white;
+    padding: 200px 20px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    font-family: 'playfair Display' serif;
+    
+
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #eee8e8;
+  }
+
+  .hero h1, .hero p {
+    animation: fadeIn 2s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+  .hero h1, .books h2, .about h2 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .tag {
+    background: crimson;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+
+  /* Books Section */
+  .books {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+  }
+  .books h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .book-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .book-card:hover {
+    transform: translateY(-10px);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25Spx rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+  }
+  .book-card h3 {
+    margin: 0.5rem 0;
+    color: #00796b;
+  }
+  .book-card p {
+    color: #555;
+  }
+  .rating {
+    color:gold;
+    font-size: 1rem;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #e0f2f1;
+  }
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .about p {
+    max-width: 700px;
+    margin: auto;
+    color: #333;
+    
+  }
+  
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    -webkit-text-fill-color: #b5eaf8;
+  }
+  footer a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .search-bar {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .book-card {
+      flex: 1 1 calc(25% - 20px);
+    }
+    @media (max-width: 768px) {
+      .book-card {
+        flex: 1 1 100%;
+      }
+    }
+    
+    
+    
+
+    
+    
+  }
+  
