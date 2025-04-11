@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fdfdfd;
+    color: #333;
+  }
+  
+  nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.7s ease-in-out;
+  }
+  
+  nav h1 {
+    font-size: 1.5em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #1abc9c;
+  }
+  
+  .hero {
+    padding: 120px 20px 60px;
+    text-align: center;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    color: white;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .search-bar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+  }
+  
+  .book-section {
+    padding: 60px 20px;
+    background-color: rgba(142, 128, 42, 0.63);
+    text-align: center;
+  }
+  .book-section  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+  }
+
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .book-card {
+    background-color: #7a8597;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomFade 0.5s ease-in-out forwards;
+  }
+  
+  .book-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  .about {
+    padding: 60px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+  }
+  
+  .social {
+    margin: 10px 0;
+  }
+  
+  .social a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomFade {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .book-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search-bar {
+      width: 90%;
+    }
+  }
