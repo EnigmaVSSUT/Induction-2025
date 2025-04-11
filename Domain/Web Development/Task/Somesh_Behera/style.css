@@ -1,0 +1,260 @@
+body {
+    position: relative;
+}
+
+.container-1 {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+}
+
+.first-image {
+    margin-left: 30px;
+    height: 200px;
+    margin-top: 300px;
+    margin-right: 30px;
+}
+
+.text-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.para-1 {
+    width: 350px;
+    font-size: 19px;
+    margin-top: 0px;
+    font-family: outfit;
+}
+
+.title-1 {
+    font-size: 40px;
+    font-family: outfit;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-section-1, .book-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.book-section-1 h3, .book-section-2 h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-1, .book-2, .book-3 {
+    height: 400px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book-1:hover, .book-2:hover, .book-3:hover {
+    transform: scale(1.1);
+}
+
+.books {
+    display: flex;
+    flex-direction: row;
+    margin-top: 90px;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    width: 500px;
+}
+
+h3 {
+    margin-top: 90px;
+    font-size: 45px;
+    font-family: Merriweather;
+}
+
+h4 {
+    font-size: 25px;
+    margin-top: 30px;
+    font-family: Josefin Sans;
+}
+
+.container-3 {
+    margin-top: 95px;
+    text-align: center;
+}
+
+.text-2 {
+    width: 850px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 15px;
+    font-family: Inconsolata;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: Josefin Sans;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: Quicksand;
+}
+
+.contact-us {
+    margin-top: 5px;
+    font-family: Quicksand;
+}
+
+.container-4 {
+    background-color: #EDEDED;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .text-2 {
+        width: 90%;
+        max-width: 850px;
+    }
+    
+    .books {
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container-1 {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .first-image {
+        margin: 20px auto;
+        margin-top: 0;
+    }
+
+    .text-1 {
+        margin: 20px 0;
+    }
+
+    .para-1 {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .books {
+        gap: 50px;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .book-1, .book-2, .book-3 {
+        height: 350px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 35px;
+        margin-top: 60px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .title-1 {
+        font-size: 32px;
+    }
+
+    .para-1 {
+        font-size: 16px;
+    }
+
+    .text-2 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-1 {
+        padding: 10px;
+    }
+
+    .first-image {
+        height: 150px;
+    }
+
+    .book-1, .book-2, .book-3 {
+        height: 300px;
+        width: 180px;
+    }
+
+    .books {
+        gap: 30px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-4 {
+        height: auto;
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .title-1 {
+        font-size: 28px;
+    }
+
+    .para-1 {
+        font-size: 14px;
+    }
+}
