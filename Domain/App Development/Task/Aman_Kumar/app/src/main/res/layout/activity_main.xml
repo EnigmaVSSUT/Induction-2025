@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@drawable/bg_pic1"
+    android:scrollbars="vertical">
+
+    <!-- ScrollView to allow vertical scrolling -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- LinearLayout inside the ScrollView for stacking content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- About Me Section -->
+
+            <TextView
+                android:id="@+id/main_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/delius_regular"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                android:text="Personal Portfolio"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/about_me_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="About Me"
+                android:fontFamily="@font/signika"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/myImageView"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+
+                android:scaleType="fitEnd"
+                android:src="@drawable/dp_pic" />
+
+            <TextView
+                android:id="@+id/about_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Hello everyone, I'm a student passionate in learning Android developent and building amazing apps. I enjoy learning new technologies. I am looking forward to collaborate with like-minded peers to learn and explore."
+                android:textSize="20sp"
+                android:fontFamily="@font/dosis"
+                android:textStyle=""
+                android:textColor="@color/black"
+                android:paddingTop="8dp"
+                android:paddingBottom="5dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <!-- Information Section -->
+
+            <TextView
+                android:id="@+id/info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Basic Information"
+                android:fontFamily="@font/signika"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <!-- Details List -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Name: Aman Kumar"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Branch: CSE (AI &amp; ML)"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Regd. No.: 2402081006"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Section: D1"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Hobbies Section -->
+
+            <TextView
+                android:id="@+id/hobbies_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="My Hobbies"
+                android:fontFamily="@font/signika"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <!-- Hobbies List -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="🎮 Gaming"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="🏏 Playing cricket"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:radius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="🎥 Watching movies"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Contact Links -->
+
+            <TextView
+                android:id="@+id/contacts_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Contact Links"
+                android:fontFamily="@font/signika"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/github"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GitHub : https://github.com/amankr-07"
+                android:textSize="18sp"
+                android:textColor="@color/purple_700"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:autoLink="web"
+                android:textAlignment="center"
+                android:linksClickable="true" />
+
+            <TextView
+                android:id="@+id/linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Linkedin : https://www.linkedin.com/in/aman-kumar-aa33b1337"
+                android:textSize="18sp"
+                android:textColor="@color/purple_700"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:autoLink="web"
+                android:textAlignment="center"
+                android:linksClickable="true" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-mail : amankr4604@gmail.com"
+                android:textSize="18sp"
+                android:textColor="@color/purple_700"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:autoLink="email"
+                android:textAlignment="center"
+                android:linksClickable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
