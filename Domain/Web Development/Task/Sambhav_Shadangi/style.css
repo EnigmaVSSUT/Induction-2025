@@ -1,0 +1,149 @@
+:root {
+    --dark-blue: #03045e;
+    --deep-blue: #023e8a;
+    --medium-blue: #0077b6;
+    --light-blue: #00b4d8;
+    --sky-blue: #90e0ef;
+    --soft-blue: #caf0f8;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
+    background-color: white;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .banner{
+    background-color: #ffffff;
+    padding: 30px 50px;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .hero {
+    background-color: var(--sky-blue);
+    padding: 100px 20px;
+    color: var(--dark-blue);
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    color: var(--deep-blue);
+  }
+  
+  .books-section {
+    background-color: var(--soft-blue);
+  }
+  
+  .light-bg {
+    background-color: var(--sky-blue);
+  }
+  
+  .books-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: var(--deep-blue);
+  }
+  
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .book-card {
+    background: white;
+    border: 1px solid var(--medium-blue);
+    padding: 20px;
+    max-width: 250px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+  
+  .book-card h3 {
+    font-size: 1.1em;
+    color: var(--medium-blue);
+    margin-bottom: 5px;
+  }
+  
+  .book-card p {
+    font-size: 0.9em;
+    color: var(--dark-blue);
+  }
+  
+  .about {
+    background-color: #caf0f8;
+    padding: 60px 20px;
+  }
+  
+  .about p {
+    
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(-deep-blue);
+    font-size: 1em;
+  }
+  
+  footer {
+    background-color: var(--light-blue);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.3em;
+    color: var(--dark-blue);
+    gap: 0.2em;
+  }
+  
+  .enigma-brand {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+  
+  .green-heart {
+    font-size: 1em;
+    line-height: 10vh;
+  }
+  
+  
+  
