@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoonLight Readers </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+     
+      --rich-black: #0d1b2aff;
+      --oxford-blue: #1b263bff;
+      --yinmn-blue: #415a77ff;
+      --silver-lake-blue: #778da9ff;
+      --platinum: #e0e1ddff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--rich-black);
+      background-color: var(--platinum);
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    
+    .header {
+      background: rgb(229, 225, 225);
+      box-shadow: 0 2px 10px rgba(131, 10, 10, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    
+   
+    @media (min-width: 10px) {
+      .header:has(~ .hero-section:hover + .books-section),
+      .header:has(~ .books-section:hover),
+      .header:has(~ .about-section:hover),
+      .header:has(~ .contact-section:hover),
+      .header:has(~ .footer:hover) {
+        background: var(--oxford-blue);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .header:has(~ .hero-section:hover + .books-section) .logo,
+      .header:has(~ .books-section:hover) .logo,
+      .header:has(~ .about-section:hover) .logo,
+      .header:has(~ .contact-section:hover) .logo,
+      .header:has(~ .footer:hover) .logo,
+      .header:has(~ .hero-section:hover + .books-section) .nav-links a,
+      .header:has(~ .books-section:hover) .nav-links a,
+      .header:has(~ .about-section:hover) .nav-links a,
+      .header:has(~ .contact-section:hover) .nav-links a,
+      .header:has(~ .footer:hover) .nav-links a {
+        color: var(--platinum);
+      }
+    }
+    
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--yinmn-blue);
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    
+    .logo i {
+      margin-right: 10px;
+      color: var(--silver-lake-blue);
+      transition: all 0.3s ease;
+    }
+    
+    .logo:hover i {
+      transform: rotate(15deg);
+      color: var(--yinmn-blue);
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 30px;
+      position: relative;
+    }
+    
+    .nav-links a {
+      color: var(--oxford-blue);
+      font-weight: 500;
+      transition: all 0.3s;
+      text-decoration: none;
+      padding: 5px 0;
+    }
+    
+    .nav-links a:hover {
+      color: var(--yinmn-blue);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--silver-lake-blue);
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+      background-color: var(--yinmn-blue);
+    }
+    
+   
+    .mobile-menu-btn {
+      display: none;
+    }
+    
+    #mobile-menu-toggle {
+      display: none;
+    }
+    
+ 
+    .hero-section {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(13, 27, 42, 0.9)), 
+                  url('https://images.unsplash.com/photo-1509291985095-788b32582a81?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJvb2slMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+      color: white;
+      margin-top: 60px;
+    }
+    
+    .hero-section .container {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      color: var(--platinum);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      color: var(--platinum);
+    }
+    
+    
+    .btn {
+      display: inline-block;
+      background: var(--yinmn-blue);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: var(--silver-lake-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--platinum);
+      color: var(--platinum);
+      margin-left: 15px;
+    }
+    
+    .btn-outline:hover {
+      background: var(--platinum);
+      color: var(--oxford-blue);
+      border-color: var(--platinum);
+    }
+    
+    
+    .books-section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: var(--oxford-blue);
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--silver-lake-blue);
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+    
+    
+    .bookshelf-container {
+      display: flex;
+      justify-content: center;
+      margin: 60px 0;
+    }
+    
+    .bookshelf {
+      width: 100%;
+      max-width: 1000px;
+      background: var(--oxford-blue);
+      border-radius: 10px;
+      padding: 40px 30px 30px;
+      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.2);
+      position: relative;
+    }
+    
+    .bookshelf::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background: linear-gradient(to right, 
+        var(--rich-black) 0%, 
+        var(--yinmn-blue) 15%, 
+        var(--yinmn-blue) 85%, 
+        var(--rich-black) 100%);
+      border-radius: 10px 10px 0 0;
+    }
+    
+    .shelf {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed var(--silver-lake-blue);
+    }
+    
+    .shelf:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .book {
+      width: 150px;
+      height: 200px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateY(0deg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .book:hover {
+      transform: perspective(1000px) rotateY(10deg) translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .book-spine {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, var(--yinmn-blue), var(--silver-lake-blue));
+      position: absolute;
+      left: 0;
+      transform: translateZ(-5px);
+    }
+    
+    .book-cover {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .book-cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 27, 42, 0);
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+    
+    .book:hover .book-cover::before {
+      background: rgba(13, 27, 42, 0.1);
+    }
+    
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .book:hover .book-cover img {
+      transform: scale(1.1);
+    }
+    
+    .book-title {
+      padding: 10px;
+      background: white;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--oxford-blue);
+      z-index: 1;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .book:hover .book-title {
+      background: var(--silver-lake-blue);
+      color: white;
+    }
+    
+    .book-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--yinmn-blue);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      z-index: 2;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .book:hover .book-badge {
+      background: var(--rich-black);
+      transform: translateY(-2px);
+    }
+    
+ 
+    .about-section {
+      padding: 80px 0;
+      background: var(--oxford-blue);
+      color: var(--platinum);
+    }
+    
+    .about-section .section-title {
+      color: var(--platinum);
+    }
+    
+    .about-section .section-title::after {
+      background: var(--platinum);
+    }
+    
+    .about-text {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+    
+   
+    .contact-section {
+      padding: 80px 0;
+      background: var(--platinum);
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    
+    .contact-item {
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-item i {
+      font-size: 2rem;
+      color: var(--yinmn-blue);
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover i {
+      color: var(--silver-lake-blue);
+      transform: scale(1.1);
+    }
+    
+   
+    .footer {
+      background: var(--rich-black);
+      color: var(--platinum);
+      padding: 50px 0 20px;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .social-icons a {
+      color: var(--platinum);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--oxford-blue);
+    }
+    
+    .social-icons a:hover {
+      color: white;
+      background: var(--yinmn-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+   
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--yinmn-blue);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 999;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    
+    @media (min-width: 10px) {
+      .back-to-top:has(~ .books-section:hover),
+      .back-to-top:has(~ .about-section:hover),
+      .back-to-top:has(~ .contact-section:hover),
+      .back-to-top:has(~ .footer:hover) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    
+    .back-to-top:hover {
+      background: var(--silver-lake-blue);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+  
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--rich-black);
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .mobile-menu-toggle {
+        display: none;
+      }
+      
+      .mobile-menu-toggle + label {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--rich-black);
+      }
+      
+      .mobile-menu-toggle + label:before {
+        content: "\f0c9";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+      
+      .mobile-menu-toggle:checked + label:before {
+        content: "\f00d";
+      }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--oxford-blue);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(168, 28, 28, 0.1);
+      }
+      
+      .mobile-menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+      }
+      
+      .nav-links a {
+        color: var(--platinum);
+      }
+
+      .header:has(~ .hero-section:hover + .books-section) .mobile-menu-btn,
+      .header:has(~ .books-section:hover) .mobile-menu-btn,
+      .header:has(~ .about-section:hover) .mobile-menu-btn,
+      .header:has(~ .contact-section:hover) .mobile-menu-btn,
+      .header:has(~ .footer:hover) .mobile-menu-btn {
+        color: var(--platinum);
+      }
+      
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      
+      .shelf {
+        gap: 15px;
+      }
+      
+      .book {
+        width: 120px;
+        height: 160px;
+      }
+    }
+    
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+      }
+      
+      .book {
+        width: 100px;
+        height: 140px;
+      }
+      
+      .book-title {
+        font-size: 0.8rem;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo"><i class="fas fa-book-open"></i> MoonLight readers</div>
+      <nav class="navbar">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+        <label for="mobile-menu-toggle" class="mobile-menu-btn"></label>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#science">Science Books</a></li>
+          <li><a href="#stories">Story Books</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero-section" id="home">
+    <div class="container">
+      <h1 class="hero-title">Welcome to MoonLight Readers</h1>
+      <p class="hero-subtitle">Your gateway to where curiosity meets creativity!</p>
+      <div>
+        <a href="#science" class="btn">Browse Books</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="books-section" id="science">
+    <div class="container">
+      <h2 class="section-title">Science Books</h2>
+      <div class="bookshelf-container">
+        <div class="bookshelf">
+          <div class="shelf">
+            <div class="book">
+              <div class="book-badge">New</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://cdn4.volusion.store/zjhys-xrwrf/v/vspfiles/photos/9780345539434-2T.jpg" alt="Cosmos by Carl Sagan" loading="lazy" />
+              </div>
+              <div class="book-title">Cosmos</div>
+            </div>
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71nVaKxpR2L.jpg" alt="A Brief History of Time by Stephen Hawking" loading="lazy" />
+              </div>
+              <div class="book-title">Brief History of Time</div>
+            </div>
+            <div class="book">
+              <div class="book-badge">Bestseller</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://img3.od-cdn.com/ImageType-100/0116-1/%7B50430149-CD08-4EAB-8C98-46DE8CEB7496%7DImg100.jpg" alt="The Selfish Gene by Richard Dawkins" loading="lazy" />
+              </div>
+              <div class="book-title">The Selfish Gene</div>
+            </div>
+          </div>
+          <div class="shelf">
+            <div class="book">
+              <div class="book-badge">Popular</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://images.newscientist.com/wp-content/uploads/2024/11/22100649/SEI_230301233.jpg" alt="rich dad poor dad: An Intimate History by Siddhartha Mukherjee" loading="lazy" />
+              </div>
+              <div class="book-title">The burning earth</div>
+            </div>
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/51e9tNHsSgL.jpg" alt="Astrophysics for People in a Hurry by Neil deGrasse Tyson" loading="lazy" />
+              </div>
+              <div class="book-title">Astrophysics</div>
+            </div>
+            <div class="book">
+              <div class="book-badge">Staff Pick</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ea9d080718c641f7f486e06/1596718782152-VEEF2RU8ASFVA6AQX5ZU/Hidden-Life-of-Trees-e1479536981824.jpg" alt="The Hidden Life of Trees by Peter Wohlleben" loading="lazy" />
+              </div>
+              <div class="book-title">Hidden Life of Trees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="books-section" id="stories">
+    <div class="container">
+      <h2 class="section-title">Story Books</h2>
+      <div class="bookshelf-container">
+        <div class="bookshelf">
+          <div class="shelf">
+            <div class="book">
+              <div class="book-badge">Classic</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/71Q1tPupKjL.AC_UF1000,1000_QL80.jpg" alt="Pride and Prejudice by Jane Austen" loading="lazy" />
+              </div>
+              <div class="book-title">Pride and Prejudice</div>
+            </div>
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/61NAx5pd6XL.jpg" alt="1984 by George Orwell" loading="lazy" />
+              </div>
+              <div class="book-title">1984</div>
+            </div>
+            <div class="book">
+              <div class="book-badge">Staff Pick</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781439175408/the-gates-9781439175408_xlg.jpg" alt="The Great Gatsby by F. Scott Fitzgerald" loading="lazy" />
+              </div>
+              <div class="book-title">The Great Gatsby</div>
+            </div>
+          </div>
+          <div class="shelf">
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://wallpapers.com/images/featured/to-kill-a-mockingbird-pictures-q1qq2daadh6wlvwf.jpg" alt="To Kill a Mockingbird by Harper Lee" loading="lazy" />
+              </div>
+              <div class="book-title">To Kill a Mockingbird</div>
+            </div>
+            <div class="book">
+              <div class="book-badge">Bestseller</div>
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://m.media-amazon.com/images/S/aplus-media/vc/9a0c00e3-c4f6-4698-892d-acefb1e239c4.__CR0,0,970,600_PT0_SX970_V1___.jpg" alt="The Hobbit by J.R.R. Tolkien" loading="lazy" />
+              </div>
+              <div class="book-title">The Hobbit</div>
+            </div>
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/81-dpSm9RhL.jpg" alt="The Odyssey by Homer" loading="lazy" />
+              </div>
+              <div class="book-title">The Odyssey</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="about-text">
+        At MoonLight Readers, we're passionate about nurturing young minds through the power of stories and the excitement of science. We believe that learning should be an adventure! Our selection of engaging storybooks fosters empathy, imagination, and a love for reading. Paired with our accessible and captivating science books, we aim to empower children to explore the world with wonder and develop a lifelong curiosity. Discover books that will spark their imaginations and lay the foundation for a future filled with discovery.
+      </p>
+      <div style="text-align: center;">
+        <a href="#science" class="btn">Start Exploring</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p>MoonLightReaders@gmail.com</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <p>+91-987654321</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Burla,Main Road,
+          Sambalpur,Odisha</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 MoonLight Readers. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <a href="#home" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</body>
+</html>
