@@ -4,4 +4,4 @@ An E-commercial webpage built on top of HTML and CSS. It is a layout of a book s
 
 The link to the website is given below: 
 
-https://clonepiyushmishra0620.github.io/sample/
+https://clonepiyushmishra0620.github.io/BookShopOnline/
