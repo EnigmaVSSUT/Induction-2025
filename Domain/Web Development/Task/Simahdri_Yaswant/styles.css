@@ -1,0 +1,224 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    padding-bottom: 2rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f67280;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .book-section {
+    padding: 3rem 2rem;
+  }
+  
+  .book-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2f3542;
+    font-size: 2rem;
+  }
+  
+  .book-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .book-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .book-card h3 {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .book-card p {
+    padding: 0 0.8rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .about-us {
+    background-color: #f1f2f6;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .about-us p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  footer {
+    background-color: #2f3542;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .book-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  /* Instagram link style */
+a.social-link.instagram {
+    color: #DD2A7B ; /* Instagram pink */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a.social-link.instagram:hover {
+    color: #ff66a6;
+  }
+  
+  /* LinkedIn link style */
+  a.social-link.linkedin {
+    color: #0077b5; /* LinkedIn blue */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a.social-link.linkedin:hover {
+    color: #66c2ff;
+  }
+  /* email link style */
+  a.social-link.email {
+    color: #ffffff; /* email white */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a.social-link.email:hover {
+    color: #c7c0c0;
+  }
+  /*zoom and blur background image*/
+
+
+
+  
