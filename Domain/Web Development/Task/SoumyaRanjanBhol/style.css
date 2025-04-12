@@ -1,0 +1,269 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE6A9;
+    text-align: center;
+    padding-top: 70px; /* To offset fixed navbar */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Navbar */
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+.navbar nav {
+    width: 100%;
+    max-width: 1000px; /* Centers the nav within wider screens */
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+.navbar nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hide scroll bar on mobile nav */
+.navbar nav::-webkit-scrollbar {
+    display: none;
+}
+
+/* Header Section */
+.head {
+    position: relative;
+    background: url('child.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header-overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Search */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+#searchBar {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #e68900;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Books Section */
+.books-section {
+    margin: 30px auto;
+    padding: 20px;
+    background: #DEAA79;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.book-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+}
+
+.book-item img {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.book-item img:hover {
+    transform: scale(1.1);
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-top: 5px;
+}
+
+/* About Section */
+.about {
+    margin: 40px;
+    padding: 20px;
+    background-color: #B1C29E;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* View More Button */
+.view-more {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view-more:hover {
+    background-color: #e68900;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff9800;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 15px;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar nav ul {
+        gap: 12px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 6px 10px;
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .navbar nav ul {
+        gap: 8px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .head {
+        height: 200px;
+    }
+
+    .header-overlay {
+        padding: 10px;
+    }
+
+    .book-item img {
+        width: 100px;
+        height: 140px;
+    }
+}
