@@ -1,0 +1,13 @@
+body {
+    background: url('opaque pic.png') no-repeat center center fixed;
+    background-size: 80%; /* Ensures the image covers the entire screen */
+    font-family: Arial, sans-serif; /* Optional: Set a font for the website */
+}
+/* filepath: c:\Users\aditi\OneDrive\Desktop\Enigma webdev\style.css */
+img {
+    transition: transform 0.3s ease; /* Smooth transition for the effect */
+}
+
+img:hover {
+    transform: scale(1.1); /* Scales the image to 110% of its size */
+}
