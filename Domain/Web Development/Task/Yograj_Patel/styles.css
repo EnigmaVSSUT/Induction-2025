@@ -32,7 +32,6 @@
     text-align: center;
   }
   
-  /* Navbar */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -104,7 +103,6 @@
     cursor: pointer;
   }
   
-  /* Hero Section */
   .hero {
     background-color: var(--cherry-blossom-pink);
     text-align: center;
@@ -143,8 +141,7 @@
     z-index: 2;
     margin: 0 auto;
   }
-  
-  /* Book Sections */
+
   .section {
     padding: 80px 10%;
     background-color: var(--timberwolf);
@@ -246,7 +243,6 @@
     transform: translateX(5px);
   }
   
-  /* About Us Section */
   .about-us {
     background-color: var(--ash-gray);
     text-align: center;
@@ -280,7 +276,6 @@
     margin: 0 auto;
   }
   
-  /* Footer */
   footer {
     background-color: var(--outer-space);
     color: #fff;
@@ -319,7 +314,6 @@
     width: 100%;
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .nav-links {
       flex-direction: column;
@@ -347,8 +341,7 @@
       height: 400px;
     }
   }
-  
-  /* Animation */
+
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
