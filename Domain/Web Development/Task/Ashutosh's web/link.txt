@@ -1,1 +1,1 @@
-http://192.168.254.231:3000/Task/Ashutosh's%20web/book_selling_landing%20.html
+http://192.168.192.231:3000/Task/Ashutosh's%20web/book_selling_landing%20.html
