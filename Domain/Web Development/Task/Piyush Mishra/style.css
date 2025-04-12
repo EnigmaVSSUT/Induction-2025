@@ -20,7 +20,7 @@ body{
     height:73px;text-align:center;width:100vw;z-index:1;background:transparent;font-weight:bolder;font-size:19px;text-align:center;color:white;cursor:default;backdrop-filter:blur(8px);box-shadow:0px 0px 5px red;position:fixed;
 }
 nav a{
-    color:white;padding:50px 5vw;border-radius:5px;border: 1px solid transparent;cursor:pointer;
+    color:brown;padding:50px 5vw;border-radius:5px;border: 1px solid transparent;cursor:pointer;
 }
 nav a:hover{
     color:rgb(4, 107, 252);background-color:rgb(255, 0, 0);text-decoration:underline 2px rgb(4, 107, 252);border:1px solid blue;text-shadow:0px 0px 15px blue;
@@ -46,10 +46,10 @@ nav a:hover{
     0%{transform:translateX(-100%);}50%{transform:translateX(-40%);}100%{transform:translateX(0%);}
 }
 .sciencebooks{
-    display:grid;height:400px;grid-template-columns:1fr 1fr;
+    display:grid;height:400px;grid-template-columns:1fr;
 }
 .storybooks{
-    display:grid;height:400px;grid-template-columns:1fr 1fr;
+    display:grid;height:400px;grid-template-columns:1fr;
 }
 .image{
     width:300px;height:400px;perspective:720px;
@@ -67,7 +67,7 @@ nav a:hover{
     transform:rotateY(180deg);
 }
 .about{
-    width:100vw;height:250px;color:white;text-align:center;border:2px solid white;border-radius:10px;z-index:35;
+    width:100vw;height:250px;color:brown;text-align:center;border:2px solid brown;border-radius:10px;z-index:35;
 }
 .about:hover{
     transform:scale(105%);perspective:600%;
@@ -96,7 +96,7 @@ nav a:hover{
 .btn:active{
     background:linear-gradient(135deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000);transform:scale(80%);color:black;box-shadow:0px 0px 25px red;animation: animatebuttons 10s linear infinite;background-size:600%;
 }
-@media screen and (max-width: 646px){
+@media screen and (max-width: 768px){
     .navigation_bar {
         font-size: 15px;
         height: auto;width:100vw;
@@ -106,7 +106,7 @@ nav a:hover{
         padding:10px;
     }
     .heading{
-        display:grid;margin:auto;justify-content:center;width:100vw;
+        display:grid;margin:auto;justify-content:center;text-align:center;
     }
     .heading header {
         font-size: 40px;
@@ -122,8 +122,5 @@ nav a:hover{
     }
     .contact{
         width:100vw;height:50px;
-    }
-    .image,.imagesbook{
-        width:50px;
     }
 }
