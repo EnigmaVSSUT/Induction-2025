@@ -1,0 +1,1 @@
+My name is Aishwarya Priyadarshini Mallick.My registration number is 2402081051.I am from branch CSE(AI and ML)and from section H.\my primary domain is Web development and secondary domain is cyber security.
