@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding-top: 80px; /* for navbar spacing */
+    background-color: #f1e9e9;
+    background-image: linear-gradient(19deg, #f1e9e9 0%, #ade5e5 100%);
+   
+    
+
+  }
+  
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .about-us a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Sections */
+  section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .hero {
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    background: url('images/bk\ -13.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    
+  }
+  
+  .hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    font-family: EB Garamond;
+  }
+  
+  .hero p {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .books-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .books-section h2 {
+    margin-bottom: 30px;
+    color: #444;
+    font-size: 2rem;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .book-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .book-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .book-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .book-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .book-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+  
+  .book-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scroll-card {
+    flex: 0 0 auto;
+    width: 180px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+  
+  .scroll-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+
+  .scroll-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px ragb(0, 0, 0, 0.2);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .social-links{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about-us h2 {
+  margin-bottom: 25px;
+  font-family: Josefin Sans;
+}
+
+.about-us p {
+  margin-bottom: 25px;
+  width: 700px;
+  font-family: 'EB Garamond', serif;
+}
+
+.section-title {
+  font-family: Josefin Sans;
+}
+
+.hero-p {
+  font-family: "Dancing Script";
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .books-section {
+    padding: 30px 15px;
+  }
+  
+  .book-scroll {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 200px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .scroll-card {
+    width: 160px;
+  }
+  
+  .scroll-card img {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .hero {
+    height: 180px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .books-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .scroll-card {
+    width: 140px;
+  }
+  
+  .scroll-card img {
+    height: 160px;
+  }
+  
+  .about-us p {
+    width: 90%;
+    margin: 0 auto 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding-top: 120px;
+  }
+  
+  .hero {
+    height: 150px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .books-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .scroll-card {
+    width: 120px;
+    padding: 0.8rem;
+  }
+  
+  .scroll-card img {
+    height: 140px;
+  }
+  
+  .scroll-card h3 {
+    font-size: 0.9rem;
+  }
+  
+  .scroll-card p {
+    font-size: 0.8rem;
+  }
+  
+  .book-scroll {
+    gap: 1rem;
+  }
+  
+  .about-us p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  
+  .scroll-card {
+    width: 100px;
+  }
+  
+  .scroll-card img {
+    height: 120px;
+  }
+  
+  .scroll-card h3 {
+    font-size: 0.8rem;
+  }
+  
+  .scroll-card p {
+    font-size: 0.7rem;
+  }
+}
