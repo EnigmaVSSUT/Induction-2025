@@ -8,7 +8,7 @@
   }
 
   body {
-    background: #f4e0e0;
+    background: #ffffff;
     color: #141414;
     line-height: 1.6;
   }
@@ -101,7 +101,12 @@
     }
 
     .about {
+      align-items: center;
       flex-direction: column;
+    }
+
+    .show_img{
+      max-width:60vw;
     }
    
     section h1{
