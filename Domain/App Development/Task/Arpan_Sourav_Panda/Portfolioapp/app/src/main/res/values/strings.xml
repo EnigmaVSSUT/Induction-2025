@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="app_name">Personal Portfolio</string>
+    <string name="main_title">Personal Portfolio</string>
+    <string name="about_me_title">About Me</string>
+    <string name="about_me">Hello everyone, I am Arpan Sourav Panda, a student at VSSUT, Burla, currently pursuing B-Tech in ETC and a passionate student exploring Android development.
+                            I am eager to learn, grow and collabrate with like-minded people. Looking forward
+                            to exciting opportunities and challenges ahead.</string>
+
+    <string name="info_title">Basic Informations</string>
+    <string name="name">Name: Arpan Sourav Panda</string>
+    <string name="branch">Branch: Electronics and Telecommunication Engineering</string>
+    <string name="regd_no">Regd. No.: 2402070126</string>
+    <string name="section">Section: I2</string>
+
+    <string name="hobbies_title">My Hobbies</string>
+    <string name="hobby_music">Music</string>
+    <string name="hobby_cricket">Playing cricket</string>
+    <string name="hobby_movies">Watching movies</string>
+
+    <string name="contacts_title">Contact Links</string>
+    <string name="github_link">GitHub : https://github.com/AS-ARPAN</string>
+    <string name="linkedin_link">LinkedIn : https://www.linkedin.com/in/arpan-sourav-b07730343</string>
+    <string name="email_link">E-mail : arpansourav1917@gmail.com</string>
+    <string name="profile_image_desc">Profile picture</string>
+
+
+</resources>
