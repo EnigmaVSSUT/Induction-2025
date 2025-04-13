@@ -1,0 +1,105 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:padding="16dp">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:gravity="center_horizontal">
+
+<!-- Profile Image -->
+
+    <!-- About Me -->
+
+    <!-- Hobbies Title -->
+
+    <com.example.myportfolioapp.HexagonImageView
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile"
+        tools:ignore="MissingClass" />
+
+    <TextView
+        android:id="@+id/about_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Hi, I'm Subham kumar Giri.Currently Iam studying in VSSUT BURLA from the branch of CSE. I'm a passionate Android Developer and eager to join Enigma ."
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+    <TextView
+        android:text="HOBBIES:"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Hobbies List -->
+
+
+    <!-- Contact Links -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="🏏 CRICKET\n📷 PHOTOGRAPHY\n✈️ TRAVEL"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:text="Contact Me:"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <ImageButton
+            android:id="@+id/githubBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/github"
+            android:background="@null"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="GitHub" />
+
+        <ImageButton
+            android:id="@+id/linkedinBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/linkedin"
+            android:background="@null"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="LinkedIn" />
+
+        <ImageButton
+            android:id="@+id/emailBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/email"
+            android:background="@null"
+            android:contentDescription="Email" />
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
