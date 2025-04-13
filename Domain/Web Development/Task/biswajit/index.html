@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book World - Your Literary Universe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            padding-top: 70px; 
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+        }
+        
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        
+        .books-section {
+            padding: 80px 0;
+        }
+        
+        .tab-container {
+            overflow: hidden;
+        }
+        
+        .tab-input {
+            display: none;
+        }
+        
+        .tab-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #eee;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .tab-label:first-of-type {
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .tab-label:last-of-type {
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .section-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        #tab-science:checked ~ .section-toggle .science-label,
+        #tab-stories:checked ~ .section-toggle .stories-label {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        #tab-science:checked ~ #science-content,
+        #tab-stories:checked ~ #stories-content {
+            display: block;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .book-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .book-img {
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .book-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .book-card:hover .book-img img {
+            transform: scale(1.05);
+        }
+        
+        .book-info {
+            padding: 20px;
+        }
+        
+        .book-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .book-info p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .book-info .btn {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .about {
+            background-color: var(--light-color);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            margin-bottom: 10px;
+            display: block;
+            color: #bbb;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+            
+            .mobile-menu-toggle {
+                display: none;
+            }
+            
+            .mobile-menu-toggle + .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: left 0.3s ease;
+            }
+            
+            .mobile-menu-toggle:checked + .nav-links {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .book-img {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .book-img {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .book-img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">Book World</a>
+            
+            <label for="mobile-toggle" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="mobile-toggle" class="mobile-menu-toggle">
+            
+            <ul class="nav-links">
+                <li><a href="#books">Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Explore Your Next Literary Adventure</h1>
+            <p>Discover our carefully curated collection of science and story books that will expand your mind and ignite your imagination.</p>
+            <a href="#books" class="btn">Browse Collection</a>
+        </div>
+    </section>
+
+    <section id="books" class="books-section">
+        <div class="container tab-container">
+            <h2 class="section-title">Our Collection</h2>
+            
+            <input type="radio" name="tabs" id="tab-science" class="tab-input" checked>
+            <input type="radio" name="tabs" id="tab-stories" class="tab-input">
+            
+            <div class="section-toggle">
+                <label for="tab-science" class="tab-label science-label">Science</label>
+                <label for="tab-stories" class="tab-label stories-label">Stories</label>
+            </div>
+            
+            <div id="science-content" class="tab-content">
+                <div class="books-grid">
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://weltbild.scene7.com/asset/vgw/a-brief-history-of-time-072128748.jpg" alt="Brief History of Time">
+                        </div>
+                        <div class="book-info">
+                            <h3>A Brief History of Time</h3>
+                            <p>Stephen Hawking's landmark book that explores the nature of the universe.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://i.pinimg.com/originals/eb/83/34/eb833405c42de0ec19bf618cd7d96026.jpg" alt="Cosmos">
+                        </div>
+                        <div class="book-info">
+                            <h3>Cosmos</h3>
+                            <p>Carl Sagan's classic about the evolution of the universe and human civilization.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://media.s-bol.com/K8rMXwnlqZnJ/787x1200.jpg" alt="The Selfish Gene">
+                        </div>
+                        <div class="book-info">
+                            <h3>The Selfish Gene</h3>
+                            <p>Richard Dawkins' revolutionary view of evolution through the gene's perspective.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://th.bing.com/th/id/OIP.eYmQvBZdhh6saPIahK1QrwHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="The Elegant Universe">
+                        </div>
+                        <div class="book-info">
+                            <h3>The Elegant Universe</h3>
+                            <p>Brian Greene explains string theory and the quest for the ultimate theory.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://media.s-bol.com/vZjBv1GPJVn0/782x1200.jpg" alt="The Gene">
+                        </div>
+                        <div class="book-info">
+                            <h3>The Gene: An Intimate History</h3>
+                            <p>Siddhartha Mukherjee's sweeping history of the gene and genetic research.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://th.bing.com/th/id/OIP.fbHHNqCDKLQ1vFgaOGympgAAAA?rs=1&pid=ImgDetMain" alt="The Emperor of All Maladies">
+                        </div>
+                        <div class="book-info">
+                            <h3>The Emperor of All Maladies</h3>
+                            <p>A biography of cancer by Siddhartha Mukherjee, winner of the Pulitzer Prize.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="stories-content" class="tab-content">
+                <div class="books-grid">
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://th.bing.com/th/id/OIP.NwFiQDwOUjW_CCQC3D2YRwHaLH?rs=1&pid=ImgDetMain" alt="Harry Potter">
+                        </div>
+                        <div class="book-info">
+                            <h3>Harry Potter and the Sorcerer's Stone</h3>
+                            <p>J.K. Rowling's magical tale of a young wizard's first year at Hogwarts.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://th.bing.com/th/id/OIP.6rp_64loKflNQokWSD3ouwHaJ4?rs=1&pid=ImgDetMain" alt="The Hobbit">
+                        </div>
+                        <div class="book-info">
+                            <h3>The Hobbit</h3>
+                            <p>Bilbo Baggins' unexpected journey in J.R.R. Tolkien's fantasy classic.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://m.media-amazon.com/images/I/815CQRnYLYL._SL1500_.jpg" alt="To Kill a Mockingbird">
+                        </div>
+                        <div class="book-info">
+                            <h3>To Kill a Mockingbird</h3>
+                            <p>Harper Lee's powerful story of racial injustice in the American South.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://th.bing.com/th?id=OPAC.hAsTS1%2bIrkBKoQ474C474&w=592&h=550&o=5&dpr=1.3&pid=21.1" alt="1984">
+                        </div>
+                        <div class="book-info">
+                            <h3>1984</h3>
+                            <p>George Orwell's dystopian masterpiece about totalitarianism and surveillance.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://flxt.tmsimg.com/assets/p159494_p_v10_ag.jpg" alt="Pride and Prejudice">
+                        </div>
+                        <div class="book-info">
+                            <h3>Pride and Prejudice</h3>
+                            <p>Jane Austen's classic novel of manners, marriage, and social status.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <div class="book-img">
+                            <img src="https://th.bing.com/th/id/R.82fd21ea4f47012811a8f2acb63877fc?rik=Qqr21WvhDHALUw&riu=http%3a%2f%2fscriptshadow.net%2fwp-content%2fuploads%2f2013%2f05%2fthe_great_gatsby_movie-wide.jpg&ehk=2aDTAv6z7BpTdmYBnQQWdsgddQyyzj1ai%2bjLHCVN2vQ%3d&risl=1&pid=ImgRaw&r=0" alt="The Great Gatsby">
+                        </div>
+                        <div class="book-info">
+                            <h3>The Great Gatsby</h3>
+                            <p>F. Scott Fitzgerald's portrait of the Jazz Age and the American Dream.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>Book World is your gateway to literary exploration. We're dedicated to bringing together the most fascinating science books and the most captivating storybooks in one place. Our carefully curated collection is designed to satisfy curious minds and imaginative spirits alike.</p>
+            <p>From the mysteries of quantum physics to the depths of fictional worlds, we believe books have the power to transform how we see the world. Our mission is to help you discover that transformative reading experience.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Book World</h3>
+                    <p>Your universe of books for knowledge and imagination.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#books">Books</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>456 Library Avenue</p>
+                    <p>Bookville, BK 67890</p>
+                    <p>hello@bookworld.com</p>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-goodreads"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Book World. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
