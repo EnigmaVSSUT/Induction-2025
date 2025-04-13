@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BookStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to BookStore</h1>
+    <p>Your one-stop shop for amazing books!</p>
+  </section>
+
+  <!-- Science Book Section -->
+  <section class="section" id="science-books">
+    <h2> 🔬Science Books</h2>
+    <div class="book-list">
+      <div class="book-card">
+        <img src="physics.jpeg" alt="Science Book 1">
+        <h3>Physics Fundamentals</h3>
+        <p>RS 450</p>
+      </div>
+      <div class="book-card">
+        <img src="biology.jpeg" alt="Science Book 2">
+        <h3>Biology Basics</h3>
+        <p>Rs 350</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Book Section -->
+  <section class="section" id="story-books">
+    <h2>📖 Story Books</h2>
+    <div class="book-list">
+      <div class="book-card">
+        <img src="story 3.jpeg" alt="Story Book 1">
+        <h3>The Enchanted Forest</h3>
+        <p>RS 90</p>
+      </div>
+      <div class="book-card">
+        <img src="story 2.jpeg" alt="Story Book 2">
+        <h3>Adventure Tales</h3>
+        <p>Rs 120</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>At BookStore, we are passionate about connecting readers with the books they love. Whether you're a science geek or a story lover, we have something for everyone.</p>
+  </section>
+  <footer>
+    <div class="footer">
+        <span>
+        2025 Book Store.All rights are reserved.....
+        </span>
+    </div>
+  </footer>
+
+</body>
+
+CSS-->
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .hero {
+    background-color: #4a90e2;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section {
+    padding: 40px 20px;
+    text-align: center;;
+  }
+  
+  .section h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .book-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .book-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .book-card p {
+    color: #27ae60;
+    font-weight: bold;
+  }
+  .footer{
+    color: #a90d0d;
+    border:3px;
+    margin:32px;
+    text-align: center
+  }
+#about{
+    background-color: rgba(81, 81, 172, 0.479);
+}
+/* Smooth transitions for everything */
+* {
+    transition: all 0.3s ease;
+  }
+  
+  /* Section background variations */
+  #science-books {
+    background: #f9f9f9;
+  }
+  
+  #story-books {
+    background: #fffdf6;
+  }
+  /* Fancy underline for section headings */
+  .section h2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: #ff6f61;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Card hover glow effect */
+  .book-card:hover {
+    box-shadow: 0 15px 25px rgba(255, 111, 97, 0.2);
+  }
+  
+  /* Button glow on hover */
+  .btn:hover {
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+  }
+  
+  /* Make images pop on hover */
+  .book-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add subtle background pattern (optional) */
+  body {
+    background-image: radial-gradient(circle at top left, #f0f8ff 1%, transparent 20%);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
+
+
+css--->>
+</html>
