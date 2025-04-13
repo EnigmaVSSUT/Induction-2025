@@ -1,0 +1,376 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section Flexbox */
+.hero {
+  background-image: 
+    linear-gradient(135deg, rgba(42, 44, 43, 0.85), rgba(42, 44, 43, 0.85)), 
+    url('LIB.JPG'); /* Replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1fdf4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #2ecc71, #1b5e20);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 14px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #f1fdf4;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e0f2f1;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+
+
+
+
+/* Books Section */
+.books {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.books h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #1b5e20;
+}
+
+.book-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.book {
+  background-color: #f8fff8;
+  border: 1px solid #c5e1a5;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.book:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background-color: #e8f5e9;
+}
+
+.book img {
+  width: 40%;
+  max-height: 200px;
+  object-fit: fit;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+
+.image-gallery {
+  display: flex;  /* Enables Flexbox */
+  flex-wrap: wrap;  /* Allows items to wrap to the next row */
+  justify-content: space-around;  /* Evenly distributes images */
+  gap: 20px;  /* Space between images */
+}
+
+.image-gallery img {
+  width: 100%;  /* Ensures images are responsive */
+  max-width: 200px;  /* Prevents the image from getting too large */
+  height: auto;
+}
+.book h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 6px;
+  color: #2e7d32;
+}
+.book h4 {
+  font-size: 1.0rem;
+  margin: 10px 0 6px;
+  color: #355736;
+}
+
+.book p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000;
+  margin: 8px 0;
+}
+
+/* Buy Button with Gradient */
+.buy-btn {
+  padding: 10px 18px;
+  background: linear-gradient(to right, #66bb6a, #2e7d32);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.buy-btn:hover {
+  background: linear-gradient(to right, #43a047, #1b5e20);
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  background-color: #f1f1f1;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background-color: #1b5e20;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+footer .social a {
+  color: #80ae82;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #a5d6a7;
+  text-decoration: underline;
+}
+/* More intense shadow effect */
+img {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4), 
+              -10px -10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Make the image container merge with the image */
+.image-container {
+  position: relative; /* Ensures the container behaves like a wrapper */
+  overflow: hidden;   /* Ensures no extra space around the image */
+  display: inline-block; /* Keeps the container aligned with the image */
+}
+
+.image-container img {
+  display: block;  
+  width: 60%;     
+  height: auto;    
+}
+
+@media screen and (max-width: 600px) {
+  .book {
+    width: 100%;
+  }
+
+  .book img {
+    width: 70%;
+    max-height: 140px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section {
+    padding: 30px 10px;
+  }
+
+  .about-us-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .book {
+    width: calc(50% - 20px);
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 0.95rem;
+  }
+
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .about-us-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .image-gallery {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .image-gallery img {
+    max-width: 48%;
+    height: auto;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/* For large screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    padding: 50px 20px;
+  }
+
+  .about-us-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .image-gallery {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .image-gallery img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  
+}
+
