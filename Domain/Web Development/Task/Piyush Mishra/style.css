@@ -45,11 +45,12 @@ nav a:hover{
 @-webkit-keyframes slideright3{
     0%{transform:translateX(-100%);}50%{transform:translateX(-40%);}100%{transform:translateX(0%);}
 }
+
 .sciencebooks{
-    display:grid;height:400px;grid-template-columns:1fr;
+    display:grid;height:400px;grid-template-columns:1fr 1fr;
 }
 .storybooks{
-    display:grid;height:400px;grid-template-columns:1fr;
+    display:grid;height:400px;grid-template-columns:1fr 1fr;
 }
 .image{
     width:300px;height:400px;perspective:720px;
@@ -122,5 +123,11 @@ nav a:hover{
     }
     .contact{
         width:100vw;height:50px;
+    }
+    .sciencebooks,.storybooks{
+        height:fit-content;grid-template-columns:1fr;grid-template-rows:1fr 1fr;row-gap:10px;
+    }
+    .images,.imagesbooks{
+        height:fit-content;width:150px;
     }
 }
