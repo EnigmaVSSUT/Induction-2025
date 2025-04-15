@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>BookShopOnline</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=0.25, maximum-scale=5.0">
+        <link rel="icon" href="https://img.freepik.com/premium-photo/frame-neon-rope-light-frame-with-books-library-colors-with-f-y2k-collage-glow-outline-art_655090-1719474.jpg">
+        <style>
+            html,body{
+                margin:0;padding:0;height:100vh;
+            }
+            body{
+                background-image:url("https://thumbs.dreamstime.com/b/abstract-health-medical-science-healthcare-icon-digital-technolo-abstract-health-medical-science-healthcare-icon-digital-127462963.jpg");background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position:center;z-index:-1;background-color:black;
+            }
+            .heading header{
+                color:white;text-align:center;font-size:70px;margin:20px;text-decoration:underline;
+            }
+            .container{
+                display:grid;height:1350px;grid-template-columns:1fr 1fr 1fr 1fr 1fr;margin:15px;gap:15px;
+            }
+            .image{
+                width:300px;height:400px;perspective:720px;
+            }
+            .imagebooks{
+                width:300px;height:400px;text-align:center;transform-style:preserve-3d;transition: transform 0.6s;
+            }
+            .books,.bookdescription{
+                position:absolute;width:100%;height:100%;backface-visibility:hidden;
+            }
+            .bookdescription{
+                color:black;background-color:red;transform:rotateY(180deg);padding:5px;
+            }
+            .image:hover .imagebooks{
+                transform:rotateY(180deg);
+            }
+            .btndiv{
+                position:absolute;top:1500px;
+            }
+            .btn{
+                width:90px;padding:10px;border-width:3px;border-radius:5px;font-size:10px;font-weight:bolder;margin:16px;color:white;background-color:black;border-color:rgba(253, 10, 10, 0.953);box-shadow:0px 0px 30px red;cursor:pointer;
+            }
+            .btn:hover{
+                background:linear-gradient(225deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000);color:black;box-shadow:0px 0px 20px red;animation: animatebuttons 10s linear infinite;background-size:600%;
+            }
+            .btn:active{
+                background:linear-gradient(135deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000);transform:scale(80%);color:black;box-shadow:0px 0px 25px red;animation: animatebuttons 10s linear infinite;background-size:600%;
+            }
+            @-webkit-keyframes animatebuttons{
+                0%{
+                    background-position:0% 0%;
+                }50%{
+                    background-position:400% 0%;
+                }100%{
+                    background-position:0% 0%;
+                }
+            }
+            @media screen and (max-width:646px){
+                .heading header{
+                    font-size:50px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="heading">
+            <header>Science Books</header>
+        </section>
+        <div class="container">
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441052184i/26030734._UX160_.jpg" load="lazy" height="400px" title="The Wild Robot By Peter Brown" alt="The Wild Robot By Peter Brown">
+                    </div>
+                    <div class="bookdescription">
+                        <article style>The Wild Robot</article>
+                        <p>After a shipwreck, a robot named Roz washes up on a remote, wild island. At first, the animals fear her, but Roz gradually learns to survive by observing nature and communicating with the creatures. When she adopts a baby gosling named Brightbill, Roz begins to form a deep bond with the island’s inhabitants and finds a sense of belonging. However, her peaceful life is threatened when robots from the factory come to take her back.
+
+                            The book explores themes of identity, survival, family, and what it means to be alive, offering both adventure and emotional depth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://media.npr.org/assets/img/2021/08/12/91alzfrzzrl_custom-920e44dc03f25b53c1f529ef6fe5405a8774f78b.jpg?s=1100&c=50&f=jpeg" load="lazy" height="400px" title="City Of Stairs By Robert Jackson Bennett" alt="City Of Stairs By Robert Jackson Bennett" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>City Of Stairs</article>
+                        <p>The story is set in the city of Bulikov, once ruled by gods who made miracles commonplace. But after a rebellion, the gods were killed, and their miracles vanished—along with much of the city’s identity. The plot follows Shara Thivani, a brilliant spy and diplomat from the nation that overthrew the gods, who arrives in Bulikov to investigate the murder of a prominent historian.
+
+                            As Shara digs deeper, she uncovers secrets suggesting the gods might not be as dead as everyone believes. With the help of her massive bodyguard, Sigrud, she faces dangerous conspiracies and divine remnants.
+                            
+                            The novel explores themes of colonialism, religion, memory, and power, all wrapped in a rich, mysterious world full of forgotten magic and crumbling grandeur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://static.wixstatic.com/media/51066a_7fa23d12357a4fee838c6fe6aa3f9f0d~mv2.jpg/v1/fill/w_977,h_1500,al_c,q_85,enc_avif,quality_auto/51066a_7fa23d12357a4fee838c6fe6aa3f9f0d~mv2.jpg" load="lazy" height="400px" title="Floating Hotel" alt="Floating Hotel" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Floating Hotel</article>
+                        <p>A floating hotel is a unique and innovative form of accommodation built on water, often resembling a ship, barge, or platform. These hotels offer guests a luxurious stay while floating on rivers, lakes, or oceans. Some are stationary, while others may be mobile like cruise ships.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://miro.medium.com/v2/resize:fit:856/1*BUdvbmqaFZu0ND771Dr0Ww.jpeg" load="lazy" height="400px" title="Cats vs Robots" alt="Cats vs Robots" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Cats vs Robotics</article>
+                        <p>In Cats vs. Robots: This Is War, two ancient enemies—cats and robots—are secretly battling for control of the universe. The cats believe in chaos, naps, and freedom, while the robots follow strict logic and order. Both sides discover that Earth holds the key to winning the war.
+
+                            The story centers around Max, a human boy who loves science and builds robots, and his sister Min, who prefers animals—especially cats. When the galactic conflict lands in their home, the siblings get caught in the middle. With cosmic consequences at stake, the story turns into a hilarious and heartwarming tale of sibling rivalry, teamwork, and understanding.
+                            
+                            It’s a great read for kids who enjoy sci-fi, humor, animals, and robots, with plenty of silly moments and surprising depth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/I/81WdWq49ZzL._UF1000,1000_QL80_.jpg" load="lazy" height="400px" title="Children Of Time" alt="Children Of Time" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Children Of Time</article>
+                        <p>Humans attempt to terraform a distant planet by introducing a virus meant to uplift monkeys into intelligent beings. But the plan goes wrong, and instead, spiders—exposed to the virus—evolve into a highly intelligent, complex society over thousands of years.
+
+                            Meanwhile, the last remnants of humanity flee a dying Earth aboard a ship called the Gilgamesh, searching for a new home. When they discover the spider-ruled planet, a clash between old human ambition and new spider intelligence begins.
+                            
+                            The novel alternates between the evolving spider civilization and the struggles of the human survivors, building to a thought-provoking climax.
+                            
+                            It’s a brilliant blend of hard science fiction, evolutionary biology, and philosophical themes, asking what it means to be truly intelligent and civilized.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ864YZPXekkO7lIwPo4ko9aeMsWtO5WG8b6Q&s" load="lazy" height="400px" title="Stars Uncharted" alt="Stars Uncharted" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Stars Uncharted</article>
+                        <p>The story follows a group of strangers—each with secrets—who are thrown together aboard a spaceship after a dangerous betrayal. Among them is Nika Rik Terri, a talented body modder who can alter people's appearances and bodies with cutting-edge technology, and Josune Arriola, a crew member hiding her true identity.
+
+                            They’re on the run from ruthless corporations and bounty hunters, racing to uncover the location of a legendary lost world rich in resources. As they battle enemies and unravel mysteries, their survival depends on trust, skill, and sticking together.
+                            
+                            Stars Uncharted blends science fiction, adventure, and found-family dynamics, with cool tech, snappy dialogue, and plenty of twists. It’s great for fans of Firefly or The Expanse.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh3B1kkooHkAwF7escKfxrPphXLXe5Ent_sg&s" load="lazy" height="400px" title="The Mote In God's Eyes" alt="The Mote In God's Eyes" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>The Mote In God's Eyes</article>
+                        <p>Set in the far future, humanity has built a vast interstellar empire. When a mysterious alien spacecraft appears near a star called "The Mote," humans send a mission to investigate. What they find is a highly intelligent alien species—nicknamed Moties—who live in a star system behind a phenomenon called "God’s Eye."
+
+                            At first, the Moties seem friendly and technologically advanced. But as the humans learn more, they uncover disturbing truths about the aliens’ biology and culture—most critically, a fatal flaw that could threaten the entire galaxy if not contained.
+                            
+                            The novel explores communication between vastly different species, the ethics of containment, and the dangers of technological advancement without control. It's widely praised for its world-building, suspense, and thought-provoking story.</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/I/71LrQHJzsiL._AC_UF1000,1000_QL80_.jpg" load="lazy" height="400px" title="Of Space And Time" alt="Of Space And Time" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>OF Space And Time</article>
+                        <p>It appears that "Of Space and Time" may refer to a concept or theme explored in various scientific works, rather than a specific standalone book. One notable work that delves into the nature of space and time is The Nature of Space and Time by Stephen Hawking and Roger Penrose. This book documents a series of lectures and debates between the two renowned physicists, discussing the fundamental structure of the universe, the origins of space and time, and the interplay between general relativity and quantum mechanics. ​
+                            Internet Archive
+                            +3
+                            Bookey
+                            +3
+                            Wikipedia
+                            +3
+                            Wikipedia
+                            
+                            Another significant work is A Brief History of Time by Stephen Hawking, which provides an accessible overview of cosmology, including discussions on the nature of space and time, black holes, and the Big Bang theory. ​
+                            
+                            If you had a specific book or context in mind regarding "Of Space and Time," please provide more details, and I'd be happy to offer a more targeted summary.</p>
+                    </div>
+                </div>
+            </div>        
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1724773724i/211004190._UX160_.jpg" load="lazy" height="400px" title="When The Moon Hits Your Eyes" alt="When The Moon Hits Your Eyes" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>When The Moon Hits Your Eyes</article>
+                        <p>Set in the far future, humanity has built a vast interstellar empire. When a mysterious alien spacecraft appears near a star called "The Mote," humans send a mission to investigate. What they find is a highly intelligent alien species—nicknamed Moties—who live in a star system behind a phenomenon called "God’s Eye."
+
+                            At first, the Moties seem friendly and technologically advanced. But as the humans learn more, they uncover disturbing truths about the aliens’ biology and culture—most critically, a fatal flaw that could threaten the entire galaxy if not contained.
+                            
+                            The novel explores communication between vastly different species, the ethics of containment, and the dangers of technological advancement without control. It's widely praised for its world-building, suspense, and thought-provoking story.</p>
+                    </div>
+                </div>
+            </div>          
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqiCs2owBkKxFak3b5HFpCvo8_eJhXDRGNIw&s" load="lazy" height="400px" title="Beyond Kuiper" alt="Beyond Kuiper" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Beyond Kuiper</article>
+                        <p>The story follows Bernard William Hubert, a brilliant but disillusioned scientist who once believed in the possibility of extraterrestrial life—until his theories were publicly rejected. Years later, he discovers a classified document confirming the existence of the Galactic Star Alliance, a vast interstellar government made up of thousands of alien species, hidden from Earth.
+
+                            As Bernard is pulled into this secret cosmic world, he must navigate dangerous truths, complex alien politics, and the nature of humanity’s place in the universe. The novel explores a hidden galactic history and the reasons Earth has been kept in the dark.</p>
+                    </div>
+                </div>
+            </div>           
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFOdJANeXsZaSzjinfO-MfjK4FE2fv6a1WwA&s" load="lazy" height="400px" title="Ignition" alt="Ignition" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Ignition</article>
+                        <p>​Ignition! An Informal History of Liquid Rocket Propellants by John Drury Clark is a fascinating and humorous chronicle of the development of liquid rocket fuels during the mid-20th century. Written by a chemist who was directly involved in the field, the book offers an insider's perspective on the scientific, technical, and often chaotic world of rocket propellant research</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDN9BNpIh0qoQYW6GOEVTlRNtSrDSnnge3g&s" load="lazy" height="400px" title="Galaxias" alt="Galaxias" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Galaxies</article>
+                        <p>This classic work combines stunning photography with accessible science writing to explore the structure, formation, and mysteries of galaxies. Ferris delves into the origins of the universe, the nature of stars, and the vastness of galactic systems, making complex astronomical concepts understandable to general readers. </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://orion-uploads.openroadmedia.com/md_8313d2a37feb-10-sci-fi-books-that-explore-deep-space_to-sleep-in-a-sea-of-stars.jpg?w=640" load="lazy" height="400px" title="To Sleep In A Sea Of Stars" alt="To Sleep In A Sea Of Stars" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>To Sleep In A Sea Of Stars</article>
+                        <p>Kira Navárez, a xenobiologist on a space exploration mission, discovers an ancient alien relic on an uncolonized planet. When she accidentally makes contact with the xeno-form, a mysterious suit-like organism bonds with her body permanently. This "xeno" gives her incredible powers—but also draws the attention of alien species and powerful human factions.
+
+                            Soon, Kira becomes humanity’s most wanted person and the key to survival in a looming interstellar war. As she travels across the galaxy, she faces moral dilemmas, cosmic mysteries, and the burden of being a bridge between species.</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458._UX160_.jpg" load="lazy" height="400px" title="Dune" alt="Dune" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>Dune</article>
+                        <p>In the distant future, the desert planet Arrakis (also known as Dune) is the only source of spice melange, the most valuable substance in the universe. Spice grants extended life and powerful mental abilities, and it’s essential for space travel.
+
+                            The story follows Paul Atreides, whose noble family is assigned to rule Arrakis. After a betrayal by the rival House Harkonnen, Paul is forced into exile in the desert. There, he discovers his destiny among the native Fremen, a fierce people who believe he might be a prophesied messiah.
+                            
+                            Paul rises to power, mastering desert survival, embracing his role as a leader, and unleashing a revolution that will change the fate of the universe.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjAzMzI5OTgzMl5BMl5BanBnXkFtZTgwMTU5MTAwMDE@._V1_.jpg" load="lazy" height="400px" title="Ender's Game" alt="Ender's Game">
+                    </div>
+                    <div class="bookdescription">
+                        <article>Ender's Game</article>
+                        <p>In a future where Earth has survived two brutal alien invasions by a species called the Formics (or "Buggers"), humanity prepares for a third war by training gifted children to become military commanders.
+
+                            Andrew “Ender” Wiggin, a brilliant but isolated boy, is sent to Battle School, an orbiting military academy, where children are trained through intense strategy games and simulated battles.
+                            
+                            Ender quickly rises through the ranks, showing unmatched skill in leadership and tactics. But as the simulations become more intense and real, Ender begins to question the morality of the war—and the cost of his victories.
+                            
+                            The story builds to a powerful twist: Ender’s final “game” was not a simulation—it was the real battle, and he unknowingly destroyed the Formic homeworld.</p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="btndiv">
+            <form action="./index.html" method="get">
+                <button class="btn">Go back.</button>
+            </form>
+        </div>  
+    </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lan="en" dir="ltr">
+    <head>
+        <title>BookShopOnline</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes, inital-scale=1.0, minimum-scale=0.25, maximum-scale=5.0">
+        <link rel="icon" href="https://img.freepik.com/premium-photo/frame-neon-rope-light-frame-with-books-library-colors-with-f-y2k-collage-glow-outline-art_655090-1719474.jpg">
+        <style>
+            html,body{
+                margin:0;padding:0;height:100vh;
+            }
+            body{
+                background-color:black;background-image:url("https://static.vecteezy.com/system/resources/thumbnails/056/301/126/small/miniature-figures-exploring-an-open-book-illuminated-by-warm-lights-creating-a-whimsical-scene-photo.jpg");background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:fixed;z-index:-1;
+            }
+            .heading header{
+                color:white;text-align:center;font-size:70px;margin:20px;text-decoration:underline;
+            }
+            .container{
+                display:grid;height:1350px;grid-template-columns:1fr 1fr 1fr 1fr 1fr;margin:15px;gap:15px;
+            }
+            .image{
+                width:300px;height:400px;perspective:720px;
+            }
+            .imagebooks{
+                width:300px;height:400px;text-align:center;transform-style:preserve-3d;transition: transform 0.6s;
+            }
+            .books,.bookdescription{
+                position:absolute;width:100%;height:100%;backface-visibility:hidden;
+            }
+            .bookdescription{
+                color:black;background-color:red;transform:rotateY(180deg);padding:5px;
+            }
+            .image:hover .imagebooks{
+                transform:rotateY(180deg);
+            }
+            .btndiv{
+                position:absolute;top:1500px;
+            }
+            .btn{
+                width:90px;padding:10px;border-width:3px;border-radius:5px;font-size:10px;font-weight:bolder;margin:16px;color:white;background-color:black;border-color:rgba(253, 10, 10, 0.953);box-shadow:0px 0px 30px red;cursor:pointer;
+            }
+            .btn:hover{
+                background:linear-gradient(225deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000);color:black;box-shadow:0px 0px 20px red;animation: animatebuttons 10s linear infinite;background-size:600%;
+            }
+            .btn:active{
+                background:linear-gradient(135deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000);transform:scale(80%);color:black;box-shadow:0px 0px 25px red;animation: animatebuttons 10s linear infinite;background-size:600%;
+            }
+            @-webkit-keyframes animatebuttons{
+                0%{
+                    background-position:0% 0%;
+                }50%{
+                    background-position:400% 0%;
+                }100%{
+                    background-position:0% 0%;
+                }
+            }
+            @media screen and (max-width:646px){
+                .heading header{
+                    font-size:50px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="heading">
+            <header>Story Books</header>
+        </section>
+        <div class="container">
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/I/81-cPb94tdL._UF1000,1000_QL80_.jpg" load="lazy" height="400px" title="Harry Potter And The Cursed Child" alt="Harry Potter And The Cursed Child">
+                    </div>
+                    <div class="bookdescription">
+                        <article style>Harry Potter And The Cursed Child</article>
+                        <p>Harry Potter and the Cursed Child is a stage play set 19 years after the original Harry Potter series. It follows Harry Potter's son, Albus Severus, who struggles with living in his father's shadow. Albus befriends Scorpius Malfoy, and together they use a Time-Turner to try to change the past—but their actions create dangerous alternate timelines. The play explores themes of friendship, legacy, and the bond between parents and children.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/I/91TUM-wLxIS._UF1000,1000_QL80_.jpg" load="lazy" height="400px" title="The Christmas Pig By JK Rowling" alt="The Christmas Pig By JK Rowling" >
+                    </div>
+                    <div class="bookdescription">
+                        <article>The Christmas Pig</article>
+                        <p>The story follows a young boy named Jack who loses his beloved childhood toy, Dur Pig (DP), on Christmas Eve. Devastated, Jack is given a replacement toy called the Christmas Pig. That night, something magical happens—the toys come to life, and Jack, with the help of the Christmas Pig, sets off on a journey through the Land of the Lost to rescue DP. Along the way, they face dangers and meet lost objects, learning important lessons about love, courage, and letting go.
+
+                            It’s a magical adventure perfect for readers of all ages, especially during the holiday season.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/I/81lmxDtfxbL._AC_UF1000,1000_QL80_.jpg" load="lazy" height="400px" title="The Awesome Friendly Kid By Jeff Kinney" alt="The Awesome Friendly Kid By Jeff Kinney" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Awesome Friendly kid</article>
+                        <p>This book is a spin-off of the famous Diary of a Wimpy Kid series, but instead of Greg Heffley, the story is told from the perspective of his best friend, Rowley Jefferson.
+
+                            Rowley decides to write his own diary—and also a biography of Greg, whom he considers his "hero." However, through Rowley’s innocent and cheerful narration, readers often see that Greg is not always the best friend he claims to be. The contrast between how Rowley sees the world and how things really are leads to a lot of funny and heartwarming moments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://rukminim3.flixcart.com/image/850/1000/l2z26q80/book/u/o/7/bedtime-story-books-for-kids-in-english-ages-5-to-8-red-riding-original-image6zg2hbkyy6m.jpeg?q=20&crop=false" load="lazy" height="400px" title="Red Ridin Hood" alt="Red Ridin Hood" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>Red Ridin Hood</article>
+                        <p>A young girl named Little Red Riding Hood is sent by her mother to deliver food to her sick grandmother, who lives in the forest. Her mother warns her not to talk to strangers.
+
+                            On the way, she meets a sly wolf who tricks her into revealing where her grandmother lives. The wolf races ahead, eats the grandmother, and disguises himself in her clothes.
+                            
+                            When Little Red Riding Hood arrives, she notices that her “grandmother” looks strange (“What big eyes you have!”). The wolf reveals himself and tries to eat her too. In most versions, a woodcutter or hunter arrives just in time to save her and her grandmother (sometimes by cutting the wolf open).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://m.media-amazon.com/images/I/91es8r849YL._AC_UF1000,1000_QL80_.jpg" load="lazy" height="400px" title="The Three Musketeers" alt="The Three Musketeers" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Three Musketeers</article>
+                        <p>Set in 17th-century France, young and brave d’Artagnan leaves his home to join the King’s guard. He soon befriends three legendary musketeers—Athos, Porthos, and Aramis—and together they live by the motto:
+                            👉 “All for one, and one for all!”
+                            
+                            They become involved in dangerous plots involving Cardinal Richelieu, Queen Anne, and the mysterious spy Milady de Winter. Through duels, secrets, and political intrigue, the musketeers fight to protect honor, loyalty, and the Queen’s reputation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://cdn.kobo.com/book-images/b7b6a1b2-9eec-4d19-87d1-9669de65c392/353/569/90/False/alice-in-wonderland-18.jpg" load="lazy" height="400px" title="Alice In The Wonderland" alt="Alice In The Wonderland" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>Alice In The Woderland</article>
+                        <p>Alice, a curious young girl, falls down a rabbit hole and enters the magical world of Wonderland, where logic is turned upside down and nothing is quite what it seems.
+
+                            In Wonderland, she meets bizarre and memorable characters like:
+                            
+                            The White Rabbit, always in a hurry
+                            
+                            The Cheshire Cat, who disappears with a grin
+                            
+                            The Mad Hatter and March Hare, who host a never-ending tea party
+                            
+                            The Queen of Hearts, who loves shouting “Off with their heads!”
+                            
+                            As Alice journeys through this strange land, she questions reality, identity, and the rules of the world. Eventually, she wakes up and realizes it was all a dream—or was it?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DyXj4uwjOiN_ri3oCnw9lI5BPwxMZlWVrw&s" load="lazy" height="400px" title="The Ugly Duckling" alt="The Ugly Duckling" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Ugly Duckling</article>
+                        <p>A mother duck’s eggs hatch, but one duckling looks different—larger, clumsier, and not as cute as the others. The other animals tease and reject him, calling him ugly and chasing him away.
+
+                            Feeling sad and unwanted, the duckling wanders alone through the seasons. He faces loneliness, cold winters, and constant bullying. But one spring day, he sees a group of beautiful swans and, to his surprise, his reflection shows he’s become one too!
+                            
+                            He wasn’t an ugly duckling at all—he was a swan all along, just waiting to grow into his true beauty.</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrJ6HolRGUFg--iD6mKdCKnKvteaOP4q0ULg&s" load="lazy" height="400px" title="The Sword in the Stone" alt="The Sword in the Stone" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Sword in the Stone</article>
+                        <p>Wart, a humble and kind boy, lives in medieval England. He doesn’t know it yet, but he’s actually Arthur, the future king. He’s taken in by Sir Ector’s family and becomes the squire to his foster brother, Kay.
+
+                            One day, Wart meets Merlyn, a wise and quirky wizard who becomes his tutor. Merlyn teaches Wart important life lessons by transforming him into animals like a fish, a bird, and a squirrel, so he can learn about courage, leadership, and empathy.
+                            
+                            Later, when the King of England dies without an heir, a mysterious sword appears stuck in a stone. It is said that whoever pulls it out is the rightful king. While trying to fetch a sword for Kay, Wart casually pulls it from the stone—revealing his destiny as King Arthur.</p>
+                    </div>
+                </div>
+            </div>        
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA6erMrOKS_E-r8ieuqAM2WLkZs5O3VxcDwQ&s" load="lazy" height="400px" title="The Adventures of Tom Sawyer" alt="The Adventures of Tom Sawyer" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Adventures of Tom Sawyer</article>
+                        <p>Tom Sawyer is a clever, mischievous boy living in the small town of St. Petersburg, Missouri, along the Mississippi River. He’s always looking for adventure—and ways to get out of doing chores!
+
+                            From tricking friends into painting a fence, to running away to be a pirate, Tom's life is full of excitement. But things take a serious turn when Tom and his friend Huckleberry Finn witness a murder in the graveyard and fear the consequences of telling the truth.
+                            
+                            Later, Tom shows real courage by testifying in court to save an innocent man and even helps find hidden treasure, proving he’s more than just a troublemaker.</p>
+                    </div>
+                </div>
+            </div>          
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7Ihnhel2guvBujshlnKa4lpUk1_gt7-TlQ&s" load="lazy" height="400px" title="Through The Looking Glass" alt="Through The Looking Glass" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>Through The Looking Glass</article>
+                        <p>One snowy day, Alice steps through a mirror (looking-glass) in her living room and enters a world where everything is reversed—backward logic, talking chess pieces, and odd rules.
+
+                            In this strange land, Alice becomes a pawn in a giant living chess game. As she travels across the chessboard to become a queen, she meets all kinds of whimsical and puzzling characters like:
+                            
+                            🥚 Humpty Dumpty, who talks about language and logic
+                            
+                            👬 Tweedledum and Tweedledee, who recite strange poems
+                            
+                            💐 Talking flowers and the Red and White Queens, who speak in riddles and rules
+                            
+                            Eventually, Alice reaches the end of the chessboard, becomes a queen, and attends a bizarre royal banquet—only to wake up and realize it was all a dream.</p>
+                    </div>
+                </div>
+            </div>           
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://cdn.kobo.com/book-images/0eab0283-7258-4712-adb5-26455d3323fd/353/569/90/False/the-invisible-man-18.jpg" load="lazy" height="400px" title="The Invisible Man" alt="The Invisible Man" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Invisibl Man</article>
+                        <p>The story follows Griffin, a brilliant but reclusive scientist who discovers the secret to becoming invisible. Hoping to use this power for personal gain, he performs the experiment on himself—but he can't reverse it. As he becomes increasingly isolated and paranoid, Griffin turns to violence and crime to survive.
+
+                            Eventually, his actions spiral out of control, and he becomes hunted. His descent into madness shows how his invisibility, instead of giving him power, strips away his humanity.
+                            
+                            The novel explores themes of identity, power, alienation, and moral responsibility in a gripping and thought-provoking way.</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327873594i/77270.jpg" load="lazy" height="400px" title="The Jungle Book" alt="The Jungle Book" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Jungle Book</article>
+                        <p>Mowgli, a young boy, is found in the jungle and raised by wolves after his parents are lost. Under the guidance of his wise panther friend Bagheera and the fun-loving bear Baloo, Mowgli learns the “Law of the Jungle” and grows up among the animals.
+
+                            He faces many adventures, including escaping the tricky monkeys, learning survival skills, and confronting his biggest enemy—Shere Khan, the fierce tiger who believes Mowgli doesn’t belong in the jungle.
+                            
+                            As Mowgli matures, he struggles with where he truly belongs—the wild jungle or the world of men. Eventually, he must make a choice between his animal family and returning to human society.</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://assets.cntraveller.in/photos/60ba07f2f27d46df614fbb2c/master/w_1600%2Cc_limit/FLIPKART-the-blue-umbrella-original-imadq9quyhgaaykd.jpg" load="lazy" height="400px" title="The Blue Umbrella" alt="The Blue Umbrella" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>The Blue Umbrella</article>
+                        <p>The story revolves around a young girl named Binya, who lives in a small mountain village. One day, she trades her leopard-claw pendant for a beautiful blue umbrella owned by some tourists. The umbrella becomes the envy of the entire village, especially of Ram Bharosa, the old shopkeeper.
+
+                            Blinded by jealousy, Ram Bharosa tries to get the umbrella through dishonest means. However, when Binya realizes this, she chooses to forgive him and gifts him the umbrella. In turn, Ram Bharosa learns a lesson in humility and kindness.
+                            
+                            The story highlights themes of kindness, forgiveness, contentment, and the simple joys of life, all conveyed with Ruskin Bond’s gentle storytelling style.</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkKqzN7TuO1xKDSKsygOqE57GMQ3-i3yw_aw&s" load="lazy" height="400px" title="Looking for The Rainbow" alt="Looking for The Rainbow" >
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>Looking For The Rainbow</article>
+                        <p>Set during the British India era, the story follows a young Ruskin Bond and his deep bond with his father, whom he visits during school holidays. These visits are filled with warmth, storytelling, and the simple joys of everyday life—like walks, book readings, and playing with pets.
+
+                            But Ruskin’s world turns upside down when his father suddenly passes away. Heartbroken and alone, he struggles to understand the loss. The story gently explores his journey of coping with grief, holding onto memories, and trying to find hope—or a "rainbow"—after the storm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imagebooks">
+                    <div class="books">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyNNJoypc8IIQ5DQs-w3-PJJNf1_7DDRlUaQ&s" load="lazy" height="400px" title="A Good House For Children" alt="A Good House For Children">
+                    </div>
+                    <div class="bookdescription" style="overflow:auto">
+                        <article>A Good House For Children</article>
+                        <p>In this haunting gothic tale, Orla and her young son move to a grand but eerie house in the remote countryside of Devon, which was once a home for troubled children. At first, it seems like the perfect escape from city life—but the house holds dark secrets.
+
+                            As Orla begins to uncover the disturbing history of the place, strange things start happening. Her son begins behaving oddly, claiming to see children no one else can. Meanwhile, the house’s atmosphere grows more oppressive and terrifying.
+                            
+                            Orla must confront the ghosts of the past—both literal and emotional—to protect her son and unravel the mystery hidden within the walls of the house.</p>
+                    </div>    
+                </div>
+            </div>
+        </div>        
+        <div class="btndiv">
+            <form action="./index.html" method="get">
+                <button class="btn">Go back.</button>
+            </form>
+        </div>    
+    </body>
+</html>
