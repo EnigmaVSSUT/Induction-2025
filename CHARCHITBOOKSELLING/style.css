@@ -1,0 +1,93 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #0e0327;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Book Sections */
+  .books-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .book-card {
+    background: rgb(255, 255, 255);
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .book-card h3 {
+    margin: 1rem 0;
+  }
+  
+  .book-card p {
+    font-size: 0.9rem;
+  }
+  
+  /* About Us Section */
+  .about-us {
+    padding: 2rem;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Footer */
+  footer {
+    background: #b4111100;
+    color: rgb(47, 28, 155);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .book-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .book-card {
+      width: 80%;
+      margin: 1rem 0;
+    }
+  }
+  
